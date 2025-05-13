@@ -545,6 +545,7 @@ GameObject:
   - component: {fileID: 610628402}
   - component: {fileID: 610628401}
   - component: {fileID: 610628404}
+  - component: {fileID: 610628405}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -672,13 +673,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 610628399}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a02a64c7dcacd8849813bb9609c22fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerCam: {fileID: 60756034}
   cctvCam: {fileID: 1417040715}
+--- !u!114 &610628405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 610628399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d924bea0c59db04790d6d4d80971522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraControl: {fileID: 0}
+  pressDepth: 1
 --- !u!1 &1353882589
 GameObject:
   m_ObjectHideFlags: 0

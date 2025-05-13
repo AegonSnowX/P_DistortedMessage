@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/CameraPrototype.unity
+    guid: 752b28fefba6f044692642bdfe68ce83
+  - enabled: 0
     path: Assets/Scenes/ButtonPrototype.unity
     guid: 4bc8e4b28604d944ca1bc6b0cc83a2ff
   m_configObjects:
