@@ -12,11 +12,10 @@ EditorUserSettings:
       value: 5a5757560101590a5d0c0e24427b5d44434e4c7a7b7a23677f2b4565b7b5353a
       flags: 0
     RecentlyUsedSceneGuid-1:
-<<<<<<< HEAD
       value: 5753575e00010b0955585c76147a0b44151649282f7e24602e2a4560e3b2323e
-=======
+      flags: 0
+    RecentlyUsedSceneGuid-2:
       value: 54040604570d0f5e0b0c0d7416730b44404e4a7c787a24342b2c4b6be1e56c6b
->>>>>>> 73302ca (feat(cctv): add initial prototype for camera switching system)
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
