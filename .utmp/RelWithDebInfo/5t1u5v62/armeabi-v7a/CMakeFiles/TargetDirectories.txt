@@ -1,0 +1,5 @@
+C:/Unity Junior Programming/Prototype 1/P_DistortedMessage/.utmp/RelWithDebInfo/5t1u5v62/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Unity Junior Programming/Prototype 1/P_DistortedMessage/.utmp/RelWithDebInfo/5t1u5v62/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+C:/Unity Junior Programming/Prototype 1/P_DistortedMessage/.utmp/RelWithDebInfo/5t1u5v62/armeabi-v7a/FramePacing/CMakeFiles/swappywrapper.dir
+C:/Unity Junior Programming/Prototype 1/P_DistortedMessage/.utmp/RelWithDebInfo/5t1u5v62/armeabi-v7a/FramePacing/CMakeFiles/edit_cache.dir
+C:/Unity Junior Programming/Prototype 1/P_DistortedMessage/.utmp/RelWithDebInfo/5t1u5v62/armeabi-v7a/FramePacing/CMakeFiles/rebuild_cache.dir
