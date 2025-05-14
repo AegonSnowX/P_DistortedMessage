@@ -377,6 +377,7 @@ GameObject:
   - component: {fileID: 203863269}
   - component: {fileID: 203863268}
   - component: {fileID: 203863267}
+  - component: {fileID: 203863271}
   m_Layer: 5
   m_Name: CanvasReportScreen
   m_TagString: Untagged
@@ -469,6 +470,19 @@ RectTransform:
   m_AnchoredPosition: {x: 1.312, y: 1.253}
   m_SizeDelta: {x: 1920.0001, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &203863271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203863266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92e77f011c681654cb0dffb36e5a3640, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpointManager: {fileID: 1753673334}
 --- !u!1 &241258585
 GameObject:
   m_ObjectHideFlags: 0
@@ -768,7 +782,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 619646192}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 203863271}
+        m_TargetAssemblyTypeName: ReportScreen, Assembly-CSharp
+        m_MethodName: OnFriendlyButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &619646192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1219,6 +1245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943d13e58e06b2f4a87e2b6ec706d0d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkpointManager: {fileID: 0}
   pressDepth: 0.05
 --- !u!1 &1486349891
 GameObject:
@@ -1378,6 +1405,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1634753505}
   m_CullTransparentMesh: 1
+--- !u!1 &1753673333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1753673335}
+  - component: {fileID: 1753673334}
+  m_Layer: 0
+  m_Name: CheckpointManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1753673334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753673333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73fd082ee96740379198bc7ef0e6b3dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  entityPrefabs:
+  - {fileID: 5561611375567366032, guid: 13dd446aa1fadb241834a8307f9117f8, type: 3}
+  - {fileID: -4765172340022479530, guid: b20a99987191e684188995e6ee721767, type: 3}
+  spawnPoint: {fileID: 16211282}
+--- !u!4 &1753673335
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753673333}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1896363836
 GameObject:
   m_ObjectHideFlags: 0
@@ -1568,7 +1643,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1973464280}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 203863271}
+        m_TargetAssemblyTypeName: ReportScreen, Assembly-CSharp
+        m_MethodName: OnHostileButtonPressed
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1973464280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1866,3 +1953,4 @@ SceneRoots:
   - {fileID: 1246757505}
   - {fileID: 203863270}
   - {fileID: 1486349894}
+  - {fileID: 1753673335}

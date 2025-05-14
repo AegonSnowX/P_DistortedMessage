@@ -2,7 +2,7 @@ using UnityEngine;
 
 public interface IReportable 
 {
-    void HandleReport(ReportDescision report);
+    void HandleReport(ReportDecision report);
 }
 
 

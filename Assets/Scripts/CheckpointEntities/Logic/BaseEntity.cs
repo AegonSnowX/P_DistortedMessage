@@ -1,25 +1,25 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public abstract class NewMonoBehaviourScript : MonoBehaviour, IReportable
+public abstract class BaseEntity : MonoBehaviour, IReportable
 {
     public string ID; //for tracking entities
     public float duration; // duration of the existence of that entity
 
-    public void HandleReport(ReportDescision descision)     // for different types to handle report
+    public void HandleReport(ReportDecision decision)     // for different types to handle report
     {
-        switch (descision)
+        switch (decision)
         {
-            case ReportDescision.Friendly:
+            case ReportDecision.Friendly:
                 OnReportedAsFriendly();
                 break;
-            case ReportDescision.Hostility:
+            case ReportDecision.Hostility:
                 OnReportedAsHostile();
                 break;
-            case ReportDescision.Suspicious:
+            case ReportDecision.Suspicious:
                 OnReportedAsSuspicious();
                 break;
-            case ReportDescision.Unknown:
+            case ReportDecision.Unknown:
                 OnReportedAsUnknown();
                 break;
         }
@@ -30,7 +30,7 @@ public abstract class NewMonoBehaviourScript : MonoBehaviour, IReportable
     protected virtual void OnReportedAsSuspicious() { }
 
 }
-public enum ReportDescision
+public enum ReportDecision
 {
     Friendly, 
     Hostility,

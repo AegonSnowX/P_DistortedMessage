@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TestTouch : MonoBehaviour
 {
+    [SerializeField] CheckpointManager checkpointManager;
     private InputManager inputManager;
     private Camera cameraMain;
 
@@ -36,6 +37,7 @@ public class TestTouch : MonoBehaviour
             {
                 // Press the button
                 transform.localPosition = originalPosition - new Vector3(0, pressDepth, 0);
+                
             }
         }
     }
