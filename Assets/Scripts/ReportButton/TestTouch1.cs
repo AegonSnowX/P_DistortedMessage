@@ -4,7 +4,7 @@ public class TestTouch1 : MonoBehaviour
 {
     private InputManager inputManager;
     private Camera cameraMain;
-    public CameraControl cameraControl;
+   // public CameraControl cameraControl;
 
     private Vector3 originalPosition;
     public float pressDepth = 1f;
@@ -36,7 +36,7 @@ public class TestTouch1 : MonoBehaviour
             if (hit.transform == transform)
             {
                 // Press the button
-                cameraControl.ToggleView();
+               // cameraControl.ToggleView();
             }
         }
     }
