@@ -2,6 +2,11 @@ using UnityEngine;
 
 public abstract class HostileEntity: BaseEntity
 {
+    private int score = 10;
+    private void Start()
+    {
+        scoreValue = score;
+    }
     protected override void OnReportedAsFriendly()
     {
         Debug.Log("HostileEntity.OnReportedAsFriendly");
@@ -10,6 +15,7 @@ public abstract class HostileEntity: BaseEntity
     protected override void OnReportedAsHostile()
     {
         Debug.Log("HostileEntity.OnReportedAsHostile");
+        Die();
     }
 
     protected override void OnReportedAsUnknown()
