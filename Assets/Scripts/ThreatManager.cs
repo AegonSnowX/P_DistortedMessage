@@ -6,6 +6,7 @@ public class CheckpointManager : MonoBehaviour
     [SerializeField] private BaseEntity[] entityPrefabs;
     [SerializeField] private Transform spawnPoint; // temperorary singular spawn point to be changed later to an array of already ste spawn point
     private BaseEntity currentEntity; // current entitiy in the game
+    public bool isUnderThreat = false;
 
     public void Start()
     {
@@ -19,6 +20,7 @@ public class CheckpointManager : MonoBehaviour
         }
         
         currentEntity = Instantiate(prefab, spawnPoint.position, Quaternion.identity);
+        isUnderThreat = true; //there is entity so there is threat
     }
     
     public void ReportEntity(ReportDecision decision)
@@ -29,6 +31,7 @@ public class CheckpointManager : MonoBehaviour
             Destroy(currentEntity.gameObject); // remove after report
             currentEntity = null;
             StartSpawnDelay(2);
+            isUnderThreat = false; //there is no entity so there is threat
         }
     }
     

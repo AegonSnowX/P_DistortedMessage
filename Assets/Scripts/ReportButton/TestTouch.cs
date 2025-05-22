@@ -40,7 +40,7 @@ public class TestTouch : MonoBehaviour
                 // Press the button
                 transform.localPosition = originalPosition - new Vector3(0, pressDepth, 0);
                 
-                if (!screen.isOpen)
+                if (!screen.isOpen && checkpointManager.isUnderThreat)
                     screen.Open();
             }
         }
