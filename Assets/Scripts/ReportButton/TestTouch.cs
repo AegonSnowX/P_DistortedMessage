@@ -3,9 +3,11 @@ using UnityEngine;
 public class TestTouch : MonoBehaviour
 {
     [SerializeField] CheckpointManager checkpointManager;
+    [SerializeField] ReportScreen screen; // used to show the reportScreen
     private InputManager inputManager;
     private Camera cameraMain;
 
+    //bools
     private Vector3 originalPosition;
     public float pressDepth = 1f;
 
@@ -38,6 +40,8 @@ public class TestTouch : MonoBehaviour
                 // Press the button
                 transform.localPosition = originalPosition - new Vector3(0, pressDepth, 0);
                 
+                if (!screen.isOpen)
+                    screen.Open();
             }
         }
     }
