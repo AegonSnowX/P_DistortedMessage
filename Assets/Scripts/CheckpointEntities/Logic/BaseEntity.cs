@@ -4,7 +4,7 @@ using UnityEngine.EventSystems;
 public abstract class BaseEntity : MonoBehaviour, IReportable
 {
     public string ID; //for tracking entities
-    public int scoreValue = 10;
+    public abstract int ScoreValue { get; }
     public float duration; // duration of the existence of that entity
 
     public void HandleReport(ReportDecision decision)     // for different types to handle report
@@ -31,7 +31,11 @@ public abstract class BaseEntity : MonoBehaviour, IReportable
     protected virtual void OnReportedAsSuspicious() { }
     public virtual void Die()
     {
-        ScoreManager.Instance.AddScore(scoreValue);
+        Destroy(gameObject);
+    }
+
+    public virtual void Rescue()
+    {
         Destroy(gameObject);
     }
 }

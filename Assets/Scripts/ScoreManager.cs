@@ -12,6 +12,11 @@ public class ScoreManager : Singleton<ScoreManager>
         score += amount;
         OnScoreChanged?.Invoke(score);
     }
+    public void RemoveScore(int amount)
+    {
+        score -= amount;
+        OnScoreChanged?.Invoke(score);
+    }
 
     public int CurrentScore => score;
 }

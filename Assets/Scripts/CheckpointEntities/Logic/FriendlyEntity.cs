@@ -3,20 +3,19 @@ using UnityEngine;
 
 public abstract class FriendlyEntity: BaseEntity
 {
-    private int score = -10;
-    private void Start()
-    {
-        scoreValue = score;
-    }
-
+    public override int ScoreValue => 10;
+    
     protected override void OnReportedAsFriendly()
     {
         Debug.Log("FriendlyEntity.OnReportedAsFriendly");
+        ScoreManager.Instance.AddScore(ScoreValue);// friend == friendly
+        Die();
     }
 
     protected override void OnReportedAsHostile()
     {
         Debug.Log("FriendlyEntity.OnReportedAsHostile");
+        ScoreManager.Instance.RemoveScore(ScoreValue); // friend != hostile
         Die();
     }
 
