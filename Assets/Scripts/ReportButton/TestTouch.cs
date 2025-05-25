@@ -1,3 +1,4 @@
+using Unity.Android.Types;
 using UnityEngine;
 
 public class TestTouch : MonoBehaviour
@@ -34,9 +35,11 @@ public class TestTouch : MonoBehaviour
     {
         Ray ray = cameraMain.ScreenPointToRay(screenPosition);
         if (Physics.Raycast(ray, out RaycastHit hit))
-        {
+        { Debug.Log(hit.transform.position);
             if (hit.transform == transform)
             {
+                Debug.Log(hit.transform.position);
+               // Debug.Log(hit.)
                 // Press the button
                 transform.localPosition = originalPosition - new Vector3(0, pressDepth, 0);
                 
