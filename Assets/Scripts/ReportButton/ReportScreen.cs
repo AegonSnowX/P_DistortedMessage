@@ -1,25 +1,29 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ReportScreen : MonoBehaviour
 {
-    [SerializeField] private CheckpointManager checkpointManager;
+    [SerializeField] private ThreatManagerUpdated threatManagerUpdated;
+    [SerializeField] private TMP_Text feedback;
     public bool isOpen = false;
 
     public void OnFriendlyButtonPressed()
     {
-        checkpointManager.ReportEntity(ReportDecision.Friendly); 
+        threatManagerUpdated.ReportEntity(ReportDecision.Friendly); 
+        
         Close();// CLOSES THE MONITOR
     }
 
     public void OnHostileButtonPressed()
     {
-        checkpointManager.ReportEntity(ReportDecision.Hostility);
+        threatManagerUpdated.ReportEntity(ReportDecision.Hostility);
         Close();// CLOSES THE MONITOR
     }
 
     public void OnSuspiciousButtonPressed()
     {
-        checkpointManager.ReportEntity(ReportDecision.Suspicious);
+        threatManagerUpdated.ReportEntity(ReportDecision.Suspicious);
         Close();// CLOSES THE MONITOR
     }
 
