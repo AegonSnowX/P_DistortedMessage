@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class TestTouch : MonoBehaviour
 {
-    [SerializeField] CheckpointManager checkpointManager;
+    [SerializeField] ThreatManagerUpdated threatManagerUpdated;
     [SerializeField] ReportScreen screen; // used to show the reportScreen
     private InputManager inputManager;
     private Camera cameraMain;
@@ -43,7 +43,7 @@ public class TestTouch : MonoBehaviour
                 // Press the button
                 transform.localPosition = originalPosition - new Vector3(0, pressDepth, 0);
                 
-                if (!screen.isOpen && checkpointManager.isUnderThreat)
+                if (!screen.isOpen && threatManagerUpdated.isUnderThreat)
                     screen.Open();
             }
         }
