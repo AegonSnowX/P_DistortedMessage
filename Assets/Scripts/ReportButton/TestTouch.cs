@@ -6,7 +6,6 @@ public class TestTouch : MonoBehaviour
     [SerializeField] ThreatManagerUpdated threatManagerUpdated;
     [SerializeField] ReportScreen screen; // used to show the reportScreen
     private InputManager inputManager;
-    private Camera cameraMain;
 
     //bools
     private Vector3 originalPosition;
@@ -15,7 +14,6 @@ public class TestTouch : MonoBehaviour
     private void Awake()
     {
         inputManager = InputManager.Instance;
-        cameraMain = Camera.main;
         originalPosition = transform.localPosition;
     }
 
@@ -33,13 +31,17 @@ public class TestTouch : MonoBehaviour
 
     private void HandleTouchStart(Vector2 screenPosition, float time)
     {
-        Ray ray = cameraMain.ScreenPointToRay(screenPosition);
+        Ray ray = CameraManager.ActiveCamera.ScreenPointToRay(screenPosition);
         if (Physics.Raycast(ray, out RaycastHit hit))
-        { Debug.Log(hit.transform.position);
+        { 
+            Debug.Log(hit.transform.position);
+            Debug.DrawRay(ray.origin, ray.direction * 100f, Color.red); // 100 units long, red color
+            Debug.Log("Hit object name: " + hit.collider.gameObject.name);
+
             if (hit.transform == transform)
             {
                 Debug.Log(hit.transform.position);
-               // Debug.Log(hit.)
+              
                 // Press the button
                 transform.localPosition = originalPosition - new Vector3(0, pressDepth, 0);
                 
