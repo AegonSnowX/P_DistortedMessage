@@ -10,8 +10,7 @@ public class SimpleCameraSwitcher : MonoBehaviour
 
     void Start()
     {
-        camA.gameObject.SetActive(true);
-        camB.gameObject.SetActive(false);
+        CameraManager.Instance.SetActiveCamera(camA); // start with camA
     }
 
     void Update()
@@ -26,8 +25,8 @@ public class SimpleCameraSwitcher : MonoBehaviour
     {
         usingCamA = !usingCamA;
 
-        camA.gameObject.SetActive(usingCamA);
-        camB.gameObject.SetActive(!usingCamA);
+        Camera activeCam = usingCamA ? camA : camB;
+        CameraManager.Instance.SetActiveCamera(activeCam);
 
         if (monitorUI != null)
             monitorUI.SetActive(usingCamA); // Disable UI when on camB
